@@ -53,10 +53,8 @@ function offender(foot) {
 function bossLvl1(foot) {
   console.log("bossLvl1")
   let index = locateOneMoveWin(foot, "O")
-  //  console.log("index = locateOneMoveWin(foot, 'O') = " + index)
   if (index !== null) return index.toString()
 
-  //  console.log("index = locateOneMoveWin(foot, 'X') = " + index)
   index = locateOneMoveWin(foot, "X")
   if (index !== null) return index.toString()
 
