@@ -1,0 +1,44 @@
+#root {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.game-board {
+  width: min-content;
+  margin: 0 auto;
+  background-color: #34495e;
+  color: #fff;
+  border: 6px solid #2c3e50;
+  border-radius: 10px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.interact-img {
+  width: 130px;
+  height: 130px;
+  border: 6px solid #2c3e50;
+}
+.interact-img:hover {
+  background-color: #61dafb43;
+  border: 6px solid #2c3e50;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pill-button {
+  background-color: #60d9fbbf;
+  display: inline;
+  margin: 1em;
+}
+.pill-button:hover {
+  border-color: #b4edfd;
+}
+
+.ai {
+  margin: 1em;
+}
