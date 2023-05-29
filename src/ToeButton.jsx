@@ -7,6 +7,7 @@ export function ToeButton({
 }) {
   return (
     <button
+      className="square-button"
       toe_id={toe_id}
       letter={letter}
       onClick={e => playerSelected(toe_id, e.target)}

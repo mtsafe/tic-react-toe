@@ -1,9 +1,7 @@
 export function AISelector({ changeAI }) {
   return (
-    <>
-      <label className="ai" htmlFor="ai-select">
-        AI Algo:
-      </label>
+    <div className="ai">
+      <label htmlFor="ai-select">AI Algo:</label>
       <select
         name="ais"
         id="ai-level"
@@ -16,6 +14,6 @@ export function AISelector({ changeAI }) {
         <option value="3">Defender</option>
         <option value="4">Boss Level 1</option>
       </select>
-    </>
+    </div>
   )
 }

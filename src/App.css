@@ -8,22 +8,25 @@
 .game-board {
   width: min-content;
   margin: 0 auto;
-  background-color: #34495e;
-  color: #fff;
-  border: 6px solid #2c3e50;
+  background-color: hsl(210, 29%, 29%);
+  color: hsl(0, 0%, 100%);
+  border: 6px solid hsl(210, 29%, 24%);
   border-radius: 10px;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
+.square-button {
+  padding: 1.2em 1.2em;
+}
 .interact-img {
   width: 130px;
   height: 130px;
-  border: 6px solid #2c3e50;
+  border: 6px solid hsl(210, 29%, 24%);
 }
 .interact-img:hover {
-  background-color: #61dafb43;
-  border: 6px solid #2c3e50;
+  background-color: hsla(193, 95%, 68%, 0.263);
+  border: 6px solid hsl(210, 29%, 24%);
   border-radius: 2px;
   display: flex;
   justify-content: center;
@@ -31,14 +34,28 @@
 }
 
 .pill-button {
-  background-color: #60d9fbbf;
+  background-color: hsla(193, 95%, 68%, 0.749);
   display: inline;
   margin: 1em;
 }
 .pill-button:hover {
-  border-color: #b4edfd;
+  border-color: hsl(193, 95%, 85%);
 }
 
 .ai {
+  display: inline;
   margin: 1em;
+  padding: 0.5em;
+}
+
+@media (prefers-color-scheme: light) {
+  .square-button {
+    box-shadow: inset 0 0 0 24px hsl(345, 100%, 67%);
+  }
+  .pill-button {
+    background-color: hsl(330, 71%, 80%);
+  }
+  .ai {
+    background-color: hsl(330, 71%, 80%);
+  }
 }
