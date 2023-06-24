@@ -17,7 +17,6 @@ function getRandomInt(max) {
 }
 
 function spitBaller(foot) {
-  console.log("spitBaller")
   let testFoot = foot
     .map((toe, index) => {
       if (toe.toString() === "0") return index
@@ -28,7 +27,6 @@ function spitBaller(foot) {
 }
 
 function walker(foot) {
-  console.log("walker")
   for (let i = 0; i < 9; i++) {
     if (foot[i] === "0") return i.toString()
   }
@@ -36,22 +34,18 @@ function walker(foot) {
 }
 
 function defender(foot) {
-  console.log("defender")
   let index = locateOneMoveWin(foot, "X")
-  console.log("index = locateOneMoveWin(foot, 'X') = " + index)
   if (index === null) return spitBaller(foot)
   return index.toString()
 }
 
 function offender(foot) {
-  console.log("offender")
   let index = locateOneMoveWin(foot, "O")
   if (index === null) return spitBaller(foot)
   return index.toString()
 }
 
 function bossLvl1(foot) {
-  console.log("bossLvl1")
   let index = locateOneMoveWin(foot, "O")
   if (index !== null) return index.toString()
 

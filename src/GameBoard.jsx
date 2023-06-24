@@ -1,7 +1,6 @@
 import { ToeButton } from "./ToeButton"
 
 export function GameBoard({ toes, playerSelected }) {
-  console.log("GameBoard()")
   return (
     <div className="game-board">
       {toes.map(toe => {

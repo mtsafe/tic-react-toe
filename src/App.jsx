@@ -7,7 +7,6 @@ import { NewGameButton } from "./NewGameButton"
 import "./App.css"
 
 function App() {
-  console.log("App()")
   const [toes, setToes] = useState(newToes)
   const [statusMsg, setStatusMsg] = useState("Go!")
   const [aiStrategy, setAIStrategy] = useState(1)
@@ -31,17 +30,13 @@ function App() {
   })
 
   function playerClaimsToe(toe_id) {
-    console.log("playerClaimsToe()")
     toggleToe(toe_id, "X")
   }
   function aiClaimsToe(toe_id) {
-    console.log("aiClaimsToe()")
     toggleToe(toe_id, "O")
   }
   function displayWinner() {
-    console.log("----- WINNER DETERMINED -----")
     setStatusMsg(() => "You Win!")
-    console.log("Status MSG Set")
   }
   function displayLoser() {
     setStatusMsg(() => "You Lose...")
@@ -51,17 +46,11 @@ function App() {
   }
 
   function playerSelected(toe_id, imgElement) {
-    console.log("playerSelected()")
-
     if (statusMsg !== "Go!") return
 
     let toeLetter = imgElement.attributes.letter.nodeValue
-    console.log("toeLetter=" + toeLetter)
-
-    console.dir("foot=" + foot)
     if (toeLetter !== "0") return
     playerClaimsToe(toe_id)
-    console.dir("foot=" + foot)
     if (winner(foot, "X")) {
       displayWinner()
       return
@@ -72,7 +61,6 @@ function App() {
     }
 
     aiClaimsToe(aiChoosesToe(aiStrategy, foot))
-    console.dir("foot=" + foot)
     if (winner(foot, "O")) {
       displayLoser()
       return
@@ -84,7 +72,6 @@ function App() {
   }
 
   function toggleToe(toe_id, letter) {
-    console.log("toggleToe()")
     foot[toe_id] = letter
     setToes(toesState => {
       return toesState.map(toe => {
